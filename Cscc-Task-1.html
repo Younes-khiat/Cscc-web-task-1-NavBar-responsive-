@@ -9,17 +9,22 @@
     <nav class="nav-bar">
         <h3>NavBar</h3>
         <ul>
-            <li>Home</li>
-            <li>Features</li>
-            <li>Services</li>
-            <li>Our Work</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#our-work">Our Work</a></li>
         </ul>
     </nav>
+    <div class="home" id="home"></div>
+    <div class="features" id="features"></div>
+    <div class="services" id="services"></div>
+    <div class="our-work" id="our-work"></div>
 </body>
 <style>
     * {
         margin: 0;
         padding: 0;
+        color: white;
     }
     @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
     .nav-bar {
@@ -46,6 +51,9 @@
         font-family: "Lora", serif;
         font-size: 1rem;
         margin: auto;
+    }
+    a {
+     text-decoration: none;   
     }
 </style>
 </html>
