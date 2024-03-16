@@ -3,57 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Cscc Task 1</title>
 </head>
 <body>
     <nav class="nav-bar">
+        
         <h3>NavBar</h3>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#our-work">Our Work</a></li>
-        </ul>
+        <div class="links">
+            <label  for="icon"><i class="fa fa-bars" aria-hidden="true"></i></label>
+            <input type="checkbox" id="icon">
+            <ul class="elements">
+                <li class="page"><a href="#home">Home</a></li>
+                <li class="page"><a href="#features">Features</a></li>
+                <li class="page"><a href="#services">Services</a></li>
+                <li class="page"><a  href="#our-work">Our Work</a></li>
+            </ul>
+        </div>
     </nav>
-    <div class="home" id="home"></div>
-    <div class="features" id="features"></div>
-    <div class="services" id="services"></div>
-    <div class="our-work" id="our-work"></div>
+    <section class="pages">
+        <div class="home" id="home"></div>
+        <div class="features" id="features"></div>
+        <div class="services" id="services"></div>
+        <div class="our-work" id="our-work"></div>
+    </section>
 </body>
 <style>
     * {
         margin: 0;
         padding: 0;
-        color: white;
+        color: white; 
     }
     @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
     .nav-bar {
         width: 100vw;
         background-color: #5AADFB;
-        height: fit-content;
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;  
         height: 10vh;
     }
     h3 {
         font-size: 1.5rem;
-        margin: auto 1.2%;
-    }
+        margin: auto 35vw auto 1vw;
+    } 
+    #icon, label {
+        display: none;
+    }  
     .nav-bar ul {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        width: 30%;
-        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 50vw;
+        margin: auto;
+        height: 10vh;
     }
     .nav-bar li {
         list-style: none;
         font-family: "Lora", serif;
-        font-size: 1rem;
-        margin: auto;
+        font-size: 1.2rem;
+        margin: auto 1.8%;
     }
-    a {
+    .page {
      text-decoration: none;   
     }
+    @media screen and (max-width: 500Px) {
+        .links label {
+            display: block;
+            box-sizing: border-box;
+            height: 10vh;
+            padding: 3.4vh 5.6vw;
+            text-align: end;
+            font-size: 1.2rem;
+        } 
+        .nav-bar ul {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50vh;
+        width: 27vw;
+        transition:1s;
+        border-radius: 0 0 0 12%;
+        text-align: end;
+        overflow: visible;
+        background-color: #5AADFB;
+    }
+    .elements {
+        display: none;
+    }
+    h3 {
+        margin: auto 20vw auto 0.8vw;
+    }
+    .links input[type="checkbox"]:checked + .elements {
+        display: flex;
+        color: black;
+    }
+    }   
 </style>
 </html>
